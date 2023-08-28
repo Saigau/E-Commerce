@@ -2,6 +2,7 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2023-08-25T18:13:15 IST" name="Default suite" finished-at="2023-08-25T18:13:57 IST" duration-ms="42491">
     <groups>
     </groups>
@@ -59,6 +60,30 @@ at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invok
 at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
 at pages.Inventory_Page.add_item(Inventory_Page.java:63)
 at test.Test_Inventory.invitory(Test_Inventory.java:16)
+=======
+  <suite started-at="2023-08-28T16:33:13 IST" name="Default suite" finished-at="2023-08-28T16:33:42 IST" duration-ms="29058">
+    <groups>
+    </groups>
+    <test started-at="2023-08-28T16:33:13 IST" name="Default test" finished-at="2023-08-28T16:33:42 IST" duration-ms="29058">
+      <class name="test.Test_store_settings_creation">
+        <test-method is-config="true" signature="init()[pri:0, instance:test.Test_store_settings_creation@43df23d3]" started-at="2023-08-28T16:33:00 IST" name="init" finished-at="2023-08-28T16:33:13 IST" duration-ms="13119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="Obj()[pri:0, instance:test.Test_store_settings_creation@43df23d3]" started-at="2023-08-28T16:33:13 IST" name="Obj" finished-at="2023-08-28T16:33:13 IST" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Obj -->
+        <test-method signature="Store_part()[pri:0, instance:test.Test_store_settings_creation@43df23d3]" started-at="2023-08-28T16:33:13 IST" name="Store_part" finished-at="2023-08-28T16:33:42 IST" duration-ms="28913" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "this.wait" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.support.ui.WebDriverWait.until(java.util.function.Function)" because "this.wait" is null
+at pages.Store_setttings_store_creation.store_create_add(Store_setttings_store_creation.java:141)
+at test.Test_store_settings_creation.Store_part(Test_store_settings_creation.java:16)
+>>>>>>> 8ece73f92a3ad8e633f07d95fa140232684840b8
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -89,11 +114,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
+<<<<<<< HEAD
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invitory -->
       </class> <!-- test.Test_Inventory -->
+=======
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Store_part -->
+      </class> <!-- test.Test_store_settings_creation -->
+>>>>>>> 8ece73f92a3ad8e633f07d95fa140232684840b8
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
