@@ -3,13 +3,32 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="test.Test_Numbers">
+=======
+<<<<<<< HEAD
+      <class name="test.Test_Inventory">
         <methods>
           <include name="Obj"/>
+          <include name="invitory"/>
+=======
+      <class name="test.Test_store_settings_creation">
+>>>>>>> a2a53274fec277577f53b37050ad501b88228756
+        <methods>
+          <include name="Obj"/>
+>>>>>>> 8ece73f92a3ad8e633f07d95fa140232684840b8
           <include name="init"/>
           <include name="Numbers_level"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- test.Test_Numbers -->
+=======
+<<<<<<< HEAD
+      </class> <!-- test.Test_Inventory -->
+=======
+      </class> <!-- test.Test_store_settings_creation -->
+>>>>>>> 8ece73f92a3ad8e633f07d95fa140232684840b8
+>>>>>>> a2a53274fec277577f53b37050ad501b88228756
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
