@@ -7,24 +7,24 @@ import java.util.Properties;
 
 public class proper {
 
-	
-	
-	
-	
+
+
+
+
 	public static String prop (String value) throws IOException {
-		
-		
+
+
 		Properties pro = new Properties();
-		
+
 		String path = System.getProperty("user.dir")+"/src/test/resource/testData/config.properties";
-		
+
 		File f = new File(path);
-	FileInputStream fis  = new FileInputStream(f);
-	pro.load(fis);
-	
-	 String values = pro.getProperty(value);
-	 
-	 return values;
-	 
+		FileInputStream fis  = new FileInputStream(f);
+		pro.load(fis);
+
+		String values = pro.getProperty(value);
+
+		return values;
+
 	}
 }

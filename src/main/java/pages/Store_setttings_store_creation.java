@@ -1,16 +1,14 @@
 package pages;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Store_setttings_store_creation {
 
@@ -122,7 +120,7 @@ public class Store_setttings_store_creation {
 	public Store_setttings_store_creation(WebDriver driver) 
 	{ this.driver=driver;
 
-	
+
 	PageFactory.initElements(driver,this); 
 	}
 
@@ -134,11 +132,14 @@ public class Store_setttings_store_creation {
 
 		Store_settings.click();
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(8000);
+		Thread.sleep(10000);
+		ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
+		//switch to new tab
+		driver.switchTo().window(newTb.get(1));
 
 
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
-	//	WebElement storesCreateButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='mr-2 img-typ']")));
+		//	WebElement storesCreateButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class='mr-2 img-typ']")));
 
 		//storesCreateButton.click();
 
@@ -152,12 +153,12 @@ public class Store_setttings_store_creation {
 		Enter_Address.sendKeys("jpoint 2nd street kuvmpeu road texas");
 		Enter_Location.sendKeys("Texas U.S.A");
 
-		Upload_Logo.sendKeys(Keys.ENTER);
+		Upload_Logo.sendKeys("C:\\Users\\Mahesh\\Downloads\\LDE.JPG");
 
 		click_Enable_Business_Hours.click();
-
+		Thread.sleep(3000);
 		Select sel = new Select(Select_Business_Hours);
-		sel.selectByValue("3828276946527090");
+		sel.selectByValue("//select[@id='business_hours']");
 
 		add_Business_Hours.sendKeys(Keys.ENTER); 
 		Enter_name_for_store_hours.sendKeys("Restro logcat Hours");
